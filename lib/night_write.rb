@@ -1,6 +1,3 @@
-#!/usr/bin/env ruby
-
-require 'pry'
 class FileReader
   def read
     filename = ARGV[0]
@@ -101,18 +98,6 @@ class NightWriter
     @bottom = ""
   end
 
-
-# create method to determine which table to execute on
-
-
-
-
-  #
-  # def chunk(string, number_of_characters)
-  #   string.delete "\n"
-  #   string.chars.each_slice(number_of_characters).map(&:join)
-  # end
-
   def add_shift_for_capital_character(string)
     shifted_text = string.gsub(/[A-Z]/) {|letter| "`" + letter.downcase}
     shifted_text
@@ -182,10 +167,6 @@ class NightWriter
     end
   end
 end
-
-
-
-
 
 if __FILE__ == $0
 night = NightWriter.new

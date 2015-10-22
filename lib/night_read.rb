@@ -1,6 +1,5 @@
 require "./lib/night_write"
 
-require 'pry'
 class FileReader
   def read
     filename = ARGV[0]
@@ -34,8 +33,6 @@ class NightReader
   end
 
   def slice_string_into_twos
-    #apply this method to top bottom and middle
-
     @top = @top.scan(/.{2}/)
     @middle = @middle.scan(/.{2}/)
     @bottom = @bottom.scan(/.{2}/)
@@ -90,14 +87,7 @@ class NightReader
     end
     num
   end
-
-
 end
-
-
-
-
-
 
 if __FILE__ == $0
 night = NightReader.new
