@@ -153,7 +153,6 @@ class NightWriter
     new_string = ""
       loop do
       break if @top == ""
-      #binding.pry
       new_string += top[0..79] + "\n" +
                     middle[0..79] + "\n" +
                     bottom[0..79] + "\n"
@@ -195,7 +194,6 @@ shifted_text = night.add_shift_for_capital_character(text)
 numbered_and_shifted_text = night.add_number_trigger(shifted_text)
 braille_multi_variable_text = night.determine_digit_or_non_to_covert(numbered_and_shifted_text)
 converted_text = night.create_single_string
-binding.pry
 night.write.write(converted_text)
-puts ARGV
+puts "Created '#{ARGV[1]}' containing #{converted_text.length} characters."
 end

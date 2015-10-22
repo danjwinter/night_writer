@@ -99,16 +99,16 @@ end
 
 
 
-  if __FILE__ == $0
-  night = NightReader.new
-  text = night.reader.read
-  split_text = night.split_at_returns(text)
-  bisected_at_three_lines = night.move_to_top_bottom_middle(split_text)
-  sliced_into_twos = night.slice_string_into_twos
-  braille_key = night.create_braille_key
-  first_pass_letters = night.create_letter_string(braille_key)
-  capitalized_string = night.rescan_for_capitals(first_pass_letters)
-  final_string = night.rescan_for_numbers(capitalized_string)
-  night.write.write(final_string)
-  puts ARGV
-  end
+if __FILE__ == $0
+night = NightReader.new
+text = night.reader.read
+split_text = night.split_at_returns(text)
+bisected_at_three_lines = night.move_to_top_bottom_middle(split_text)
+sliced_into_twos = night.slice_string_into_twos
+braille_key = night.create_braille_key
+first_pass_letters = night.create_letter_string(braille_key)
+capitalized_string = night.rescan_for_capitals(first_pass_letters)
+final_string = night.rescan_for_numbers(capitalized_string)
+night.write.write(final_string)
+puts "Created '#{ARGV[1]}' containing #{final_string.length} characters."
+end

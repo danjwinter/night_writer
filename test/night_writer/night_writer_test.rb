@@ -1,4 +1,4 @@
-require './lib/night_write'
+require './lib./night_write'
 require 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
@@ -114,6 +114,7 @@ class NightWriterTest < Minitest::Test
                    "eeeeeeeeeeffffffffffgggggggggghhhhhhhhhh"
     night.bottom = "aaaaaaaaaabbbbbbbbbbccccccccccdddddddddd" +
                    "eeeeeeeeeeffffffffffgggggggggghhhhhhhhhh"
+                   binding.pry
     assert_equal "aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhh\naaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhh\naaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhh\n", night.create_single_string
   end
 end

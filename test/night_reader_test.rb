@@ -1,5 +1,5 @@
-require './lib./night_write'
-require './lib./night_read'
+require './lib/night_write'
+require './lib/night_read'
 require 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
